@@ -1,0 +1,38 @@
+<h2>Two Way Data Binding, Ex-01</h2>
+
+Enter Name at source:
+<input type="text" [(ngModel)]='pname'/>
+<br>
+Name is: {{pname}}
+<br>
+Enter Name at target:
+<input type="text" [(ngModel)]='pname'/>
+<br>
+<button (click)="getDate('date')">Date</button>
+<button (click)="getDate('time')">Time</button>
+{{msg}}
+<br>
+<button (click)="displayFruits()">Show Fruits</button>
+<h2>{{heading}}</h2>
+<ol>
+<li *ngFor="let fruit of fruits">
+    {{fruit}}
+</li>
+</ol>
+
+<!--<img [src]='path1' [title]='title1'/>-->
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>    
+            <th>ID</th><th>Name of the Person</th><th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let p of people'>
+            <td>{{p.id}}</td> <td>{{p.pname | title:p.gender }}</td> <td>{{p.age}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+

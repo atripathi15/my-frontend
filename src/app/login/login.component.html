@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 style="margin-left: 100px;">Welcome to Shopcart</h1>
+    <div class="center">       
+            <h1>Login</h1>
+            <!--<error-alert *ngIf="errorMsg" [msg]="errorMsg"></error-alert>-->
+            <div class="col-lg-4">
+                <div>                          
+                    <input type="text" placeholder="User Name" [(ngModel)]='uname'> <br><br>
+                    <input type="password" placeholder="Password" [(ngModel)]='pwd'><br><br>
+                    <button mat-raised-button color="accent" (click)='authenticateUser()'>Login</button>
+                    &nbsp;&nbsp;
+                    <button mat-raised-button color="accent" (click)='authenticateUser()'>Signup</button>                  
+                    
+                </div>                            
+            </div>
+    </div>
+    {{data.userName}}
+
+    {{response.jwt}}
+
+    {{errorMsg}}
+</div>
+    <p [ngStyle]='styleObj'>{{msg}}</p>
+
+
